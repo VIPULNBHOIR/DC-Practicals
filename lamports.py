@@ -42,7 +42,7 @@ def simulate():
     process3.receive_request(timestamp2)  # From P1
     process3.receive_request(timestamp3)  # From P2
 
-    # Process 1 & 2 receive responses from P3
+    # Process 1 & 2 receive request from P3
     process1.receive_request(process3.clock)
     process2.receive_request(process3.clock)
 

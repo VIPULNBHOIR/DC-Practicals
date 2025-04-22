@@ -2,8 +2,8 @@ class RingProcess:
     def __init__(self, id):
         self.id = id
         self.coordinator = None
-        self.next = None 
-
+        self.next = None
+        
     def start_election(self):
         print(f"Process {self.id} starts an election.")
         active_list = [self.id]
@@ -35,11 +35,9 @@ class RingProcess:
             self.coordinator = new_coordinator
             self.send_coordinator_message(new_coordinator)
 
-
 processes = [RingProcess(i) for i in range(1, 6)]
-
 
 for i in range(len(processes)):
     processes[i].next = processes[(i + 1) % len(processes)]
 
-processes[1].start_election()
+processes[4].start_election()

@@ -57,6 +57,7 @@ if p1.request_resource([p2], p1.pid):
 else:
     print("No deadlock detected.")
 
+
 print("\n--- No Deadlock Example ---")
 p5 = Process(5)
 p6 = Process(6)

@@ -11,7 +11,7 @@ public class MyServer {
             DataInputStream dis = new DataInputStream(s.getInputStream());
 
             String str = (String) dis.readUTF();
-            System.out.println("message= " + str);
+            System.out.println("Received Message= " + str);
 
             ss.close();
 
